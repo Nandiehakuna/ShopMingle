@@ -3,7 +3,7 @@ import { styled } from 'styled-components'
 
 
 const Container = styled.section`
-  height: 1000px;
+  min-height: 1000px;
 `
 
 const Section = () => {

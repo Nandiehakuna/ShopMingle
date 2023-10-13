@@ -7,10 +7,18 @@ const UL = styled.ul`
   list-style: none;
   margin: 0;
   padding-left: 0;
+
+  @media (min-width: 50em) {
+    display: flex;
+  }
 `
 
 const Li = styled.li`
   display: block;
+
+  @media (min-width: 50em) {
+    display: inline-flex;
+  }
 `
 
 const Item = styled.div`
@@ -20,18 +28,41 @@ const Item = styled.div`
   cursor: pointer;
   padding: 0.8em 1em;
   color: var(--blue400);
-  font-weight: ${(props) => props.type === "bold" && "bold"};
+  font-weight: ${(props) => props.type === "login" && "bold"};
   transition: all 0.3s ease-in;
 
   &:hover{
     background-color: var(--blue100);
   }
+
+  @media (min-width: 50em) {
+    padding: 0.5em 0.5em;
+    margin-top: 0.4em;
+    font-weight: normal;
+    margin-left: ${(props) => props.type === "login" && "1.5em"};
+    color: var(--black1f);
+
+    &:hover{
+      background-color: transparent;
+      color: var(--blue100);
+    }
+  }
+
+  @media (min-width: 62em) {
+    margin-left: ${(props) => props.type === "login" && "6em"};
+    padding: 0.5em 1.5em;
+  }
+
 `;
 
 const Hr = styled.hr`
   border: 2px solid var(--blue100);
   margin-top: 1.5em;
   margin-bottom: 2em;
+
+  @media (min-width: 50em) {
+    display: none;
+  }
 `
 
 const SignUp = styled.div`
@@ -48,6 +79,11 @@ const SignUp = styled.div`
     background-color: var(--blue100);
     color: var(--blue900);
   }
+
+  @media (min-width: 50em) {
+    margin-top: 0.2em;
+    padding: 0.5em 1em ;
+  }
 `
 
 const Navigation = () => {
@@ -56,7 +92,7 @@ const Navigation = () => {
        <Li>
         <Link to="/" style={{ textDecoration : "none"}}>
           <Item>
-            <HomeIcon/>
+            <HomeIcon className='menu-icon'/>
             Home
           </Item>
         </Link>
@@ -65,7 +101,7 @@ const Navigation = () => {
        <Li>
         <Link to="/" style={{ textDecoration : "none"}}>
           <Item>
-            <HomeIcon/>
+            <HomeIcon className='menu-icon'/>
             Category
           </Item>
         </Link>
@@ -74,7 +110,7 @@ const Navigation = () => {
        <Li>
         <Link to="/" style={{ textDecoration : "none"}}>
           <Item>
-            <HomeIcon/>
+            <HomeIcon className='menu-icon'/>
             Sale with Us
           </Item>
         </Link>
@@ -84,7 +120,7 @@ const Navigation = () => {
 
        <Li>
         <Link to="/login" style={{ textDecoration : "none"}}>
-          <Item type="bold">
+          <Item type="login">
             Log In
           </Item>
         </Link>

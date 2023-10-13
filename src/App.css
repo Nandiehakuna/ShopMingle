@@ -23,6 +23,12 @@
   box-sizing: border-box;
 }
 
+@media (min-width: 50em) {
+  :root{
+    font-size: 1.12em;
+  }
+}
+
 *::before,
 *::after{
   box-sizing: inherit;
@@ -31,4 +37,16 @@
 body{
   margin: 0;
   background-color: var(--gray-50);
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+
+@media (min-width: 50em) {
+  svg.menu-toggle{
+    display: none;
+  }
+
+  svg.menu-icon{
+    display: none;
+  }
 }

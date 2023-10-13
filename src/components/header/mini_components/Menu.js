@@ -17,7 +17,7 @@ const Menu = () => {
 
   return (
     <Nav>
-        <MenuIcon onClick={handleMenu} style={{ position : "absolute",
+        <MenuIcon className='menu-toggle' onClick={handleMenu} style={{ position : "absolute",
         top : "0.3em", right : "0.6em", 
         fontSize : "3em",
         color: "var(--blue900)", cursor : "pointer"}}/>
