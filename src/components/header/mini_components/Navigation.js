@@ -1,0 +1,106 @@
+import React from 'react'
+import { styled } from 'styled-components'
+import { Link } from 'react-router-dom'
+import HomeIcon from "@mui/icons-material/Home"
+
+const UL = styled.ul`
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+`
+
+const Li = styled.li`
+  display: block;
+`
+
+const Item = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  cursor: pointer;
+  padding: 0.8em 1em;
+  color: var(--blue400);
+  font-weight: ${(props) => props.type === "bold" && "bold"};
+  transition: all 0.3s ease-in;
+
+  &:hover{
+    background-color: var(--blue100);
+  }
+`;
+
+const Hr = styled.hr`
+  border: 2px solid var(--blue100);
+  margin-top: 1.5em;
+  margin-bottom: 2em;
+`
+
+const SignUp = styled.div`
+  margin-top: 1em;
+  padding: 0.8em 2em;
+  background-color: var(--blue900);
+  width: max-content;
+  border-radius: 3em;
+  font-weight: bold;
+  color: var(--white-color);
+  transition: all 0.4s ease-in;
+
+  &:hover{
+    background-color: var(--blue100);
+    color: var(--blue900);
+  }
+`
+
+const Navigation = () => {
+  return (
+    <UL>
+       <Li>
+        <Link to="/" style={{ textDecoration : "none"}}>
+          <Item>
+            <HomeIcon/>
+            Home
+          </Item>
+        </Link>
+       </Li>
+
+       <Li>
+        <Link to="/" style={{ textDecoration : "none"}}>
+          <Item>
+            <HomeIcon/>
+            Category
+          </Item>
+        </Link>
+       </Li>
+
+       <Li>
+        <Link to="/" style={{ textDecoration : "none"}}>
+          <Item>
+            <HomeIcon/>
+            Sale with Us
+          </Item>
+        </Link>
+       </Li>
+
+       <Hr/>
+
+       <Li>
+        <Link to="/login" style={{ textDecoration : "none"}}>
+          <Item type="bold">
+            Log In
+          </Item>
+        </Link>
+       </Li>
+
+       <Li>
+        <Link to="/signup" style={{ textDecoration : "none"}}>
+          <SignUp>
+            Sign Up
+          </SignUp>
+        </Link>
+       </Li>
+
+
+    </UL>
+  )
+}
+
+export default Navigation
