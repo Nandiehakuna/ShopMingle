@@ -17,12 +17,17 @@ const Text = styled.span`
    top: 1.2em;
    left: 3em;
    color: var(--black1f);
+
+   @media (min-width: 50em) {
+     font-size: 0.75em;
+     left: 4em;
+   }
 `;
 
 const Logo = () => {
   return (
     <Container href="/">
-        <BubbleChartIcon style={{ fontSize : "3.5em", color : "var(--blue900)"}}/>
+        <BubbleChartIcon style={{ fontSize : "3em", color : "var(--blue900)"}}/>
         <Text>ShopMingle.</Text>
     </Container>
   )

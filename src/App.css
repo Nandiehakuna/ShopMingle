@@ -3,6 +3,7 @@
   --blue400: hsl(206.82deg 89.95% 60.98%);
   --blue100: hsl(207.19deg 88.89% 85.88%);
   --blue50: #E3F2FD;
+  --blue1f: hsl(187.46deg 94.65% 63.33%);
   --aqua: hsl(163.64deg 86.67% 67.65%);
   --butterfly: hsl(315.56deg 71.68% 77.84%);
   --success-color: hsl(109.41deg 40.16% 24.9%);
@@ -19,6 +20,9 @@
   --gray-50: hsl(0deg 0% 98.04%);
   --black30: hsl(0deg 0% 18.82%);
   --black1f: hsl(0deg 0% 12.16%);
+  --black2f: hsl(210deg 8.75% 31.37%);
+  --black3f: hsl(210deg 13.95% 83.14%);
+  --black77: hsl(0deg 0% 46.67%);
 
   font-size: calc(1vw + 0.6em);
   box-sizing: border-box;
@@ -37,8 +41,11 @@
 
 body{
   margin: 0;
-  background-color: var(--gray-50);
-  font-family: Helvetica, Arial, sans-serif;
+  background-color: var(--white-color);
+  font-family: "Poppins", sans-serif;
+  color: var(--black77);
+  font-weight: 300;
+  line-height: 1.625;
 }
 
 

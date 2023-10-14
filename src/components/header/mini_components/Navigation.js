@@ -41,6 +41,7 @@ const Item = styled.div`
     font-weight: normal;
     margin-left: ${(props) => props.type === "login" && "1.5em"};
     color: var(--black1f);
+    font-size: 0.75em;
 
     &:hover{
       background-color: transparent;
@@ -51,6 +52,7 @@ const Item = styled.div`
   @media (min-width: 62em) {
     margin-left: ${(props) => props.type === "login" && "6em"};
     padding: 0.5em 1.5em;
+    text-transform: uppercase;
   }
 
 `;
@@ -83,6 +85,7 @@ const SignUp = styled.div`
   @media (min-width: 50em) {
     margin-top: 0.2em;
     padding: 0.5em 1em ;
+    font-size: 0.75em;
   }
 `
 

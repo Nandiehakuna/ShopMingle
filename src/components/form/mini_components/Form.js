@@ -5,9 +5,11 @@ const Container = styled.form`
 
 `
 
-const Form = () => {
+const Form = ({children}) => {
   return (
-    <Container>Form</Container>
+    <Container>
+      {children}
+    </Container>
   )
 }
 
