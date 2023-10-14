@@ -18,12 +18,36 @@ const Inpt = styled.input`
   }
 `
 
+const InnerWrapper= styled.div`
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  
+`
+
+const Label = styled.label`
+  color: var(--black30);
+`
+
+const Message = styled.div`
+  position: absolute;
+  background-color: var(--success-bg-color);
+  width: max-content;
+  padding: 0.2em 1em;
+  border-radius: 0.5em;
+  color: var(--success-color);
+  top: -0.5em;
+  display: none;
+`
+
+
 const Input = ({type,placeholder}) => {
   return (
-    <>
-    <Inpt type={type} placeholder={placeholder}/>
-    </>
-    
+    <InnerWrapper>
+      <Message>invalid username or password</Message>
+      <Label></Label>
+      <Inpt type={type} placeholder={placeholder}/>
+    </InnerWrapper>
   )
 }
 

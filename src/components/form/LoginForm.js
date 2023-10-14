@@ -3,6 +3,7 @@ import { styled } from 'styled-components'
 import Form from './mini_components/Form'
 import Button from './mini_components/Button'
 import Input from './mini_components/Input'
+import { Link } from 'react-router-dom'
 
 
 const Main = styled.main`
@@ -17,50 +18,25 @@ const Wrapper = styled.div`
   color: var(--black2f);
 `
 
-const InnerWrapper= styled.div`
+const Container = styled.div`
   display: flex;
-  flex-direction: column;
-  position: relative;
-  
+  justify-content: ${(props) => props.jsc };
+  font-size: 0.9em;
+  margin-top: ${(props) => props.mrg === "top" && "1.5em"} ;
 `
-
-const Label = styled.label`
-  color: var(--black30);
-`
-
-const Message = styled.div`
-  position: absolute;
-  background-color: var(--success-bg-color);
-  width: max-content;
-  padding: 0.2em 1em;
-  border-radius: 0.5em;
-  color: var(--success-color);
-  top: -0.5em;
-  display: none;
-`
-
 
 const LoginForm = () => {
   return (
     <Main>
       <Form>
         <Wrapper>
-          <InnerWrapper>
-            <Message>invalid username or password</Message>
-            <Label></Label>
-            <Input type="text" placeholder="Enter email address"/>
-          </InnerWrapper>
-
-          <InnerWrapper>
-            <Message>invalid username or password</Message>
-            <Label></Label>
-            <Input type="password" placeholder="Enter password"/>
-          </InnerWrapper>
-
-          <InnerWrapper>
-            <Button>Sign In</Button>
-          </InnerWrapper>
-          
+          <Input type="text" placeholder="Enter email address"/>
+          <Input type="password" placeholder="Enter password" link/>
+          <Container jsc="end"><Link style={{ textDecoration: "none"}}>Forgot password ?</Link></Container>
+          <Button>Sign In</Button>
+          <Container jsc="start" mrg="top">
+            New to ShopMingle ? <Link style={{ marginLeft : "0.8em", textDecoration : "none"}}>Sign Up</Link>
+          </Container>
         </Wrapper>
       </Form>
     </Main>
