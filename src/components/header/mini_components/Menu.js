@@ -18,9 +18,11 @@ const Menu = () => {
   return (
     <Nav>
         <MenuIcon className='menu-toggle' onClick={handleMenu} style={{ position : "absolute",
-        top : "0.3em", right : "0.6em", 
-        fontSize : "3em",
-        color: "var(--blue900)", cursor : "pointer"}}/>
+        top: "0.3em", right: "0.6em", 
+        fontSize: "3em",
+        color: "var(--blue900)", 
+        cursor: "pointer",
+        outline: "none"}}/>
         <Dropdown show={show}/>
     </Nav>
   )

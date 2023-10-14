@@ -1,11 +1,16 @@
 import React from 'react'
-import { styled } from 'styled-components'
-import Section from '../../components/section/Section'
+import Hero from '../../components/hero/Hero'
+import styled from 'styled-components'
 
+const Section =  styled.section`
+  min-height: 1000px;
+`
 
 const IndexPage = () => {
   return (
-    <Section>IndexPage</Section>
+    <Section>
+      <Hero/>
+    </Section>
   )
 }
 

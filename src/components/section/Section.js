@@ -2,13 +2,15 @@ import React from 'react'
 import { styled } from 'styled-components'
 
 
-const Container = styled.section`
-  min-height: 1000px;
+const Container = styled.main`
+  min-height: 2000px;
 `
 
 const Section = () => {
   return (
-    <Container>Section</Container>
+    <Container>
+       under construction
+    </Container>
   )
 }
 
