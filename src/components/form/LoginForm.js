@@ -22,7 +22,7 @@ const Container = styled.div`
   display: flex;
   justify-content: ${(props) => props.jsc };
   font-size: 0.9em;
-  margin-top: ${(props) => props.mrg === "top" && "1.5em"} ;
+  margin-top: ${(props) => props.mrg === "top" && "2em"} ;
 `
 
 const LoginForm = () => {
@@ -33,9 +33,10 @@ const LoginForm = () => {
           <Input type="text" placeholder="Enter email address"/>
           <Input type="password" placeholder="Enter password" link/>
           <Container jsc="end"><Link to="/reset-password" style={{ textDecoration: "none"}}>Forgot password ?</Link></Container>
-          <Button>Sign In</Button>
+          <Button size="large">Sign In</Button>
           <Container jsc="start" mrg="top">
-            New to ShopMingle ? <Link to="/signup" style={{ marginLeft : "0.8em", textDecoration : "none"}}>Sign Up</Link>
+            New to ShopMingle ? 
+            <Link to="/signup" style={{ marginLeft : "0.8em", textDecoration : "none"}}>Sign Up</Link>
           </Container>
         </Wrapper>
       </Form>

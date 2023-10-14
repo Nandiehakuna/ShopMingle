@@ -1,6 +1,7 @@
 import React from 'react'
 import { styled} from 'styled-components'
 import Hero from '../../components/hero/Hero'
+import SignUpForm from '../../components/form/SignUpForm'
 
 
 const Section = styled.section`
@@ -10,7 +11,8 @@ const Section = styled.section`
 const SignUpPage = () => {
   return (
     <Section>
-      <Hero page="signup">Sign Up</Hero>
+      <Hero page="other">Sign Up Page</Hero>
+      <SignUpForm/>
     </Section>
   )
 }

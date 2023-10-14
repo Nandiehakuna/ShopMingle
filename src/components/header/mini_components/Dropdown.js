@@ -10,6 +10,7 @@ const Container = styled.div`
   display: ${(props) => props.show === true ? 'block': 'none'};
   background-color: var(--white-color);
   padding: 1.2em 0 1.2em  0.8em;
+  z-index: 23;
 
   @media (min-width: 50em) {
     display: flex;

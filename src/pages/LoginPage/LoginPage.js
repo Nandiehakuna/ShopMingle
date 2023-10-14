@@ -12,7 +12,7 @@ const Section = styled.section`
 const LoginPage = () => {
   return (
     <Section>
-      <Hero page="login">Login Page</Hero>
+      <Hero page="other">Login Page</Hero>
       <LoginForm/>
     </Section>
   )
