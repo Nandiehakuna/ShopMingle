@@ -9,7 +9,7 @@ const Main = styled.main`
 `
 
 const Container = styled.div`
-  display: ${(props) => props.page === "login" && "none"};
+  display: ${(props) => props.page === "index" && "none"};
 `
 
 const Wrapper = styled.div`
@@ -58,7 +58,7 @@ const Hero = ({page = "index",children}) => {
         </Container>
 
         <Container page={page}>hero social links</Container>
-        <Container >
+        <Container page={page}>
           <Content>{children}</Content>
           <Navs></Navs>
         </Container>

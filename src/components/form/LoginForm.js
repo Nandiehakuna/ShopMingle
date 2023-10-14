@@ -32,10 +32,10 @@ const LoginForm = () => {
         <Wrapper>
           <Input type="text" placeholder="Enter email address"/>
           <Input type="password" placeholder="Enter password" link/>
-          <Container jsc="end"><Link style={{ textDecoration: "none"}}>Forgot password ?</Link></Container>
+          <Container jsc="end"><Link to="/reset-password" style={{ textDecoration: "none"}}>Forgot password ?</Link></Container>
           <Button>Sign In</Button>
           <Container jsc="start" mrg="top">
-            New to ShopMingle ? <Link style={{ marginLeft : "0.8em", textDecoration : "none"}}>Sign Up</Link>
+            New to ShopMingle ? <Link to="/signup" style={{ marginLeft : "0.8em", textDecoration : "none"}}>Sign Up</Link>
           </Container>
         </Wrapper>
       </Form>
