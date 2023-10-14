@@ -111,7 +111,7 @@ const Navigation = ({show,handleMenu}) => {
        </Li>
 
        <Li>
-        <Link to="/" onClick={handleMenu} style={{ textDecoration : "none"}}>
+        <Link to="/register-business" onClick={handleMenu} style={{ textDecoration : "none"}}>
           <Item>
             <HomeIcon className='menu-icon'/>
             Sale with Us
