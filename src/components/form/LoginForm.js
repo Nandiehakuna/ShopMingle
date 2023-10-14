@@ -2,6 +2,7 @@ import React from 'react'
 import { styled } from 'styled-components'
 import Form from './mini_components/Form'
 import Button from './mini_components/Button'
+import Input from './mini_components/Input'
 
 
 const Main = styled.main`
@@ -14,21 +15,6 @@ const Wrapper = styled.div`
   margin: 2em 1em;
   padding: 4em 0;
   color: var(--black2f);
-`
-const Input = styled.input`
-  padding: 0.9375em;
-  border-radius: 0;
-  margin-top: 2em;
-  line-height: 1.5;
-  color: inherit;
-  border: 1px solid var(--black3f);
-  background-color: var(--white-color);
-  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  margin-bottom: 1.25em;
-
-  &::selection{
-    background-color: var(--blue1f);
-  }
 `
 
 const InnerWrapper= styled.div`
