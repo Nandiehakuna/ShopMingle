@@ -8,11 +8,27 @@ const Section = styled.section`
   min-height: 1000px;
 `
 
+const Container = styled.section`
+  @media (min-width: 35em) {
+    margin: 0 auto;
+    width: 500px;
+    border: 1px solid var(--black3f);
+    border-radius: 1em;
+    margin-top: 2em;
+  }
+`
+
+const Aside = styled.aside`
+`
 const SignUpPage = () => {
   return (
     <Section>
       <Hero page="other">Sign Up Page</Hero>
-      <SignUpForm/>
+      <Container>
+        <SignUpForm/>
+        <Aside></Aside>
+      </Container>
+      
     </Section>
   )
 }
