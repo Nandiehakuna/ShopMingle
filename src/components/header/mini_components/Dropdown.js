@@ -25,10 +25,10 @@ const Container = styled.div`
   }
 `
 
-const Dropdown = ({show}) => {
+const Dropdown = ({show,handleMenu}) => {
   return (
     <Container show={show}>
-        <Navigation/>
+        <Navigation show={show} handleMenu={handleMenu}/>
     </Container>
   )
 }

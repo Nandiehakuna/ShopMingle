@@ -40,7 +40,7 @@ const Menu = () => {
         outline: "none",
         zIndex: "22"}}/>
         <Modal display={ show ? "block":"none"} onClick={() => setShow(!show)}/>
-        <Dropdown show={show}/>
+        <Dropdown show={show} handleMenu={handleMenu}/>
     </Nav>
   )
 }

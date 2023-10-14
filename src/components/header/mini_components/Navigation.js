@@ -89,11 +89,11 @@ const SignUp = styled.div`
   }
 `
 
-const Navigation = () => {
+const Navigation = ({show,handleMenu}) => {
   return (
     <UL>
        <Li>
-        <Link to="/" style={{ textDecoration : "none"}}>
+        <Link to="/" onClick={handleMenu} style={{ textDecoration : "none"}}>
           <Item>
             <HomeIcon className='menu-icon'/>
             Home
@@ -102,7 +102,7 @@ const Navigation = () => {
        </Li>
 
        <Li>
-        <Link to="/" style={{ textDecoration : "none"}}>
+        <Link to="/" onClick={handleMenu} style={{ textDecoration : "none"}}>
           <Item>
             <HomeIcon className='menu-icon'/>
             Category
@@ -111,7 +111,7 @@ const Navigation = () => {
        </Li>
 
        <Li>
-        <Link to="/" style={{ textDecoration : "none"}}>
+        <Link to="/" onClick={handleMenu} style={{ textDecoration : "none"}}>
           <Item>
             <HomeIcon className='menu-icon'/>
             Sale with Us
@@ -122,7 +122,7 @@ const Navigation = () => {
        <Hr/>
 
        <Li>
-        <Link to="/login" style={{ textDecoration : "none"}}>
+        <Link to="/login" onClick={handleMenu} style={{ textDecoration : "none"}}>
           <Item type="login">
             Log In
           </Item>
@@ -130,7 +130,7 @@ const Navigation = () => {
        </Li>
 
        <Li>
-        <Link to="/signup" style={{ textDecoration : "none"}}>
+        <Link to="/signup" onClick={handleMenu} style={{ textDecoration : "none"}}>
           <SignUp>
             Sign Up
           </SignUp>
