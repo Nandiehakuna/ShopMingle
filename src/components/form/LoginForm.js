@@ -1,6 +1,7 @@
 import React from 'react'
 import { styled } from 'styled-components'
 import Form from './mini_components/Form'
+import Button from './mini_components/Button'
 
 
 const Main = styled.main`
@@ -52,18 +53,6 @@ const Message = styled.div`
   display: none;
 `
 
-const Button = styled.button`
-  background-image: -webkit-linear-gradient(0deg, #bfacff 0%, #795fff 100%);
-  border: 1px solid transparent;
-  padding: 0.5em 2em;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  margin-top: 1.5em ;
-  border-radius: 3.125em;
-  line-height: 2.265;
-  font-weight: 500;
-  color: var(--white-color);
-`
 
 const LoginForm = () => {
   return (
