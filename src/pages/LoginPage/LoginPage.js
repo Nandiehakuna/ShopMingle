@@ -8,12 +8,31 @@ const Section = styled.section`
   min-height: 1000px;
 `
 
+const Container = styled.section`
+
+@media (min-width: 35em) {
+  margin: 0 auto;
+  width: 500px;
+  border: 1px solid var(--black3f);
+  border-radius: 1em;
+  margin-top: 2em;
+}
+  
+  
+`
+
+const Aside = styled.aside`
+
+`
 
 const LoginPage = () => {
   return (
     <Section>
       <Hero page="other">Login Page</Hero>
-      <LoginForm/>
+      <Container>
+        <LoginForm/>
+        <Aside></Aside>
+      </Container>
     </Section>
   )
 }
