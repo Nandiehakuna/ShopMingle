@@ -45,7 +45,7 @@ const Item = styled.div`
 
     &:hover{
       background-color: transparent;
-      color: var(--blue100);
+      color: var(--blue400);
     }
   }
 

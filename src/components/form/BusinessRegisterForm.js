@@ -15,10 +15,11 @@ const Main = styled.main`
 
 const Container =styled.div`
   text-align: center;
+  display: ${(props) => props.display === "none" && "none"};
 `
 
 const ProgressContainer = styled.div`
-  margin-bottom: 1.5em;
+  margin-bottom: 4em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,7 +63,7 @@ const Hr = styled.hr`
 const ArrowContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 3em;
+  margin-top: 2em;
   padding: 1em 2em;
 `
 
@@ -87,7 +88,7 @@ const BusinessRegisterForm = () => {
                     </InnerWrapper>
                 </Container>
 
-                <Container>
+                <Container display="none">
                   <Container>2. Business Location Details</Container>  
                   <InnerWrapper>
                     <Select/>
@@ -97,17 +98,17 @@ const BusinessRegisterForm = () => {
                     <Input type="email" placeholder="Enter Business email"/>
                 </Container>
 
-                <Container>
+                <Container display="none">
                    <Container>Owner Details</Container> 
                   <Input type="text" placeholder="Owner username"/>
-                  <Input type="text" placeholder="Owner email"/>
+                  <Input type="email" placeholder="Owner email"/>
                   <Input type="text" placeholder="Enter password"/>
                   <Input type="text" placeholder="Confirm password"/>
                 </Container>
                 
                 <ArrowContainer>
-                    <ArrowBack/>
-                    <ArrowForward/>
+                    <ArrowBack style={{ fontSize: "1.5em",cursor: "pointer"}}/>
+                    <ArrowForward style={{ fontSize: "1.5em",cursor: "pointer"}}/>
                 </ArrowContainer>
             </Form>
         </Wrapper>
