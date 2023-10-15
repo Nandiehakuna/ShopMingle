@@ -5,9 +5,9 @@ const Container = styled.form`
 
 `
 
-const Form = ({children}) => {
+const Form = ({children,onSubmit}) => {
   return (
-    <Container>
+    <Container onSubmit={onSubmit}>
       {children}
     </Container>
   )
