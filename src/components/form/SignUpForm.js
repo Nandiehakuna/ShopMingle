@@ -32,17 +32,39 @@ const SignUpForm = () => {
 
   const signup = (event) => {
     event.preventDefault();
-    alert('sign up')
+    
+    if(password !== confirmPassword){
+      alert("password do not match")
+    }else{
+      alert("sign up successfully")
+    }
   }
+
+  const handleUsernameOnChange = (e) =>{
+    setUsername(e.target.value)
+  }
+
+  const handleEmailOnChange = (e) => {
+    setEmail(e.target.value)
+  }
+
+  const handlePasswordOnChange = (e) =>{
+    setPassword(e.target.value)
+  } 
+
+  const handleConfirmPasswordOnChange = (e) =>{
+    setConfirmPassword(e.target.value)
+  }
+
 
   return (
     <Main>
         <Form onSubmit={signup}>
             <Wrapper>
-                <Input type="text" placeholder="Enter username"/>
-                <Input type="email" placeholder="Enter email address"/>
-                <Input type="password" placeholder="Enter password"/>
-                <Input type="password" placeholder="Confirm password"/>
+                <Input type="text" value={username} onChange={handleUsernameOnChange} required={true} placeholder="Enter username"/>
+                <Input type="email" value={email} onChange={handleEmailOnChange} required={true} placeholder="Enter email address"/>
+                <Input type="password" value={password} onChange={handlePasswordOnChange} required={true} placeholder="Enter password"/>
+                <Input type="password" value={confirmPassword} onChange={handleConfirmPasswordOnChange} required={true} placeholder="Confirm password"/>
                 <Button size="large">Sign Up</Button>
                 <Container mrg="top">
                     Already have account ? 
