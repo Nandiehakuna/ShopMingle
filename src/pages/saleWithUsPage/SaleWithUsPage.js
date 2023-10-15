@@ -17,15 +17,12 @@ const Container = styled.div`
     margin-top: 2em;
   }
 `
-const ProgressContainer = styled.div`
 
-`
 const SaleWithUsPage = () => {
   return (
     <Section>
         <Hero page='other'>Business Registration Page</Hero>
         <Container>
-            <ProgressContainer></ProgressContainer>
             <BusinessRegisterForm/>
         </Container>
     </Section>
