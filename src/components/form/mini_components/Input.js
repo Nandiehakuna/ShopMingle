@@ -41,12 +41,12 @@ const Message = styled.div`
 `
 
 
-const Input = ({type,placeholder, value,onChange}) => {
+const Input = ({type,placeholder, value,onChange, required}) => {
   return (
     <InnerWrapper>
       <Message>invalid username or password</Message>
       <Label></Label>
-      <Inpt type={type} value={value} onChange={onChange} placeholder={placeholder}/>
+      <Inpt type={type} required={required} value={value} onChange={onChange} placeholder={placeholder}/>
     </InnerWrapper>
   )
 }

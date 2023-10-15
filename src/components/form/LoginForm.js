@@ -58,8 +58,8 @@ const LoginForm = () => {
     <Main>
       <Form onSubmit={logIn}>
         <Wrapper>
-          <Input type="text" value={email} onChange={handleEmailOnChange}  placeholder="Enter email address"/>
-          <Input type="password" value={password} onChange={handlePasswordOnChange} placeholder="Enter password" link/>
+          <Input type="email" required={true} value={email} onChange={handleEmailOnChange}  placeholder="Enter email address"/>
+          <Input type="password" required={true} value={password} onChange={handlePasswordOnChange} placeholder="Enter password" link/>
           <Container jsc="end"><Link to="/reset-password" style={{ textDecoration: "none"}}>Forgot password ?</Link></Container>
           <Button size="large">Sign In</Button>
           <Container jsc="start" mrg="top">

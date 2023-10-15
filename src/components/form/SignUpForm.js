@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {styled} from 'styled-components'
 import Form from './mini_components/Form'
 import Input from './mini_components/Input'
@@ -25,9 +25,19 @@ const Container = styled.div`
 `
 
 const SignUpForm = () => {
+  const [username, setUsername] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+  const [confirmPassword, setConfirmPassword] = useState('')
+
+  const signup = (event) => {
+    event.preventDefault();
+    alert('sign up')
+  }
+
   return (
     <Main>
-        <Form>
+        <Form onSubmit={signup}>
             <Wrapper>
                 <Input type="text" placeholder="Enter username"/>
                 <Input type="email" placeholder="Enter email address"/>
