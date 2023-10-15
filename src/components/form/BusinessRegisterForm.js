@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Form from './mini_components/Form'
 import {styled} from 'styled-components'
 import Input from './mini_components/Input'
@@ -68,6 +68,21 @@ const ArrowContainer = styled.div`
 `
 
 const BusinessRegisterForm = () => {
+    let [formCounter, setFormCounter] = useState(1)
+
+    const handleFormCounterInc = () =>{
+      if(formCounter !== 3){
+        setFormCounter(formCounter++)
+      }
+      alert(formCounter)
+    }
+
+    const handleFormCounterDec = () =>{
+      if(formCounter > 1){
+        setFormCounter(formCounter--)
+      }
+      alert(formCounter)
+    }
   return (
     <Main>
         <Wrapper>
@@ -107,8 +122,8 @@ const BusinessRegisterForm = () => {
                 </Container>
                 
                 <ArrowContainer>
-                    <ArrowBack style={{ fontSize: "1.5em",cursor: "pointer"}}/>
-                    <ArrowForward style={{ fontSize: "1.5em",cursor: "pointer"}}/>
+                    <ArrowBack onClick={handleFormCounterDec} style={{ fontSize: "1.5em",cursor: "pointer"}}/>
+                    <ArrowForward onClick={handleFormCounterInc} style={{ fontSize: "1.5em",cursor: "pointer"}}/>
                 </ArrowContainer>
             </Form>
         </Wrapper>

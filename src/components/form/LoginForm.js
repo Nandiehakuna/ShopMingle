@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { styled } from 'styled-components'
 import Form from './mini_components/Form'
 import Button from './mini_components/Button'
@@ -26,6 +26,8 @@ const Container = styled.div`
 `
 
 const LoginForm = () => {
+  const [email, setEmail] = useState('')
+  
   return (
     <Main>
       <Form>
