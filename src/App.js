@@ -6,6 +6,8 @@ import LoginPage from './pages/LoginPage/LoginPage';
 import SignUpPage from './pages/signUpPage/SignUpPage';
 import PasswordResetPage from './pages/passwordResetPage/PasswordResetPage';
 import SaleWithUsPage from './pages/saleWithUsPage/SaleWithUsPage';
+import DashBoardPage from './pages/dashboardPage/DashBoardPage';
+import DashBoardIndexPage from './pages/DashNoardIndexPage/DashBoardIndexPage';
 
 const App = () => {
   return (
@@ -16,6 +18,9 @@ const App = () => {
         <Route path="/signup" element={<SignUpPage/>}/>
         <Route path='/reset-password' element={<PasswordResetPage/>}/>
         <Route path='/register-business' element={<SaleWithUsPage/>}/>
+        <Route path='/dashboard' element={<DashBoardPage/>}>
+          <Route index element={<DashBoardIndexPage/>}/>
+        </Route>
       </Route>
     </Routes>
   );
