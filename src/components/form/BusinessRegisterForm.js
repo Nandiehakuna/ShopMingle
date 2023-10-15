@@ -4,6 +4,8 @@ import {styled} from 'styled-components'
 import Input from './mini_components/Input'
 import Button from './mini_components/Button'
 import Select from './mini_components/Select'
+import ArrowBack from "@mui/icons-material/ArrowBack"
+import ArrowForward from "@mui/icons-material/ArrowForward"
 
 
 
@@ -57,6 +59,12 @@ const Hr = styled.hr`
   margin: 0;
 `
 
+const ArrowContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3em;
+  padding: 1em 2em;
+`
 
 const BusinessRegisterForm = () => {
   return (
@@ -96,6 +104,11 @@ const BusinessRegisterForm = () => {
                   <Input type="text" placeholder="Enter password"/>
                   <Input type="text" placeholder="Confirm password"/>
                 </Container>
+                
+                <ArrowContainer>
+                    <ArrowBack/>
+                    <ArrowForward/>
+                </ArrowContainer>
             </Form>
         </Wrapper>
     </Main>
