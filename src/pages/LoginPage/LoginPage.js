@@ -2,6 +2,7 @@ import React from 'react'
 import { styled} from 'styled-components'
 import Hero from '../../components/hero/Hero'
 import LoginForm from '../../components/form/LoginForm'
+import Header from '../../components/header/Header'
 
 
 const Section = styled.section`
@@ -28,6 +29,7 @@ const Aside = styled.aside`
 const LoginPage = () => {
   return (
     <Section>
+      <Header/>
       <Hero page="other">Login Page</Hero>
       <Container>
         <LoginForm/>

@@ -2,6 +2,7 @@ import React from 'react'
 import {styled} from 'styled-components'
 import Hero from '../../components/hero/Hero'
 import BusinessRegisterForm from '../../components/form/BusinessRegisterForm'
+import Header from '../../components/header/Header'
 
 
 const Section = styled.section`
@@ -21,10 +22,11 @@ const Container = styled.div`
 const SaleWithUsPage = () => {
   return (
     <Section>
-        <Hero page='other'>Business Registration Page</Hero>
-        <Container>
-            <BusinessRegisterForm/>
-        </Container>
+      <Header/>
+      <Hero page='other'>Business Registration Page</Hero>
+      <Container>
+        <BusinessRegisterForm/>
+      </Container>
     </Section>
   )
 }
