@@ -4,6 +4,7 @@ import NavHeader from './mini_components/NavHeader'
 
 
 const NavContainer = styled.nav`
+
 `
 
 const DashboardNavigation = () => {

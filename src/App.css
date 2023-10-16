@@ -23,6 +23,8 @@
   --black2f: hsl(210deg 8.75% 31.37%);
   --black3f: hsl(210deg 13.95% 83.14%);
   --black77: hsl(0deg 0% 46.67%);
+  --purple100: #bfacff;
+  --purple400:#795fff;
 
   font-size: calc(1vw + 0.6em);
   box-sizing: border-box;
