@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRightIcon from '@mui/icons-material/KeyboardArrowRight';
@@ -22,14 +22,35 @@ const Container = styled.div`
   opacity: 0.9;
   color: var(--white-color);
   font-weight: bold;
+  cursor: pointer;
+`
+
+const Modal = styled.div`
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--black30);
+  opacity: 0.7;
+  display: ${(props) => props.display === true ? "block":"none"};
+  z-index: 40;
 `
 
 const DashboardActivities = () => {
+  const [isActivityToggle, setActivityToggle] = useState(false)
+
+  const handleActivityToggle = () => {
+    setActivityToggle(!isActivityToggle)
+  }
+
   return (
-    <Section>DashboardActivities
-      <ActivityDrawer/>
-      <Container>
-        <KeyboardArrowLeftIcon  style={{ fontSize: "2.3em"}}/>
+    <Section>
+      <ActivityDrawer handleActivityToggle={handleActivityToggle} isActivityToggle={isActivityToggle} />
+      <Modal display={isActivityToggle}/>
+      <Container onClick={handleActivityToggle}  isOpen={isActivityToggle}>
+        <KeyboardArrowLeftIcon style={{ fontSize: "2.3em",
+        cursor: "pointer"}}/>
       </Container>
     </Section>
   )
