@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import styled from 'styled-components'
 import NavHeader from './mini_components/NavHeader'
 import NavDropdown from './mini_components/NavDropdown'
@@ -13,10 +13,16 @@ const NavContainer = styled.nav`
 `
 
 const DashboardNavigation = () => {
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false)
+
+  const handleDropdownToggle = () =>{
+    setIsDropdownOpen(!isDropdownOpen)
+  }
+
   return (
     <NavContainer>
-      <NavHeader/>
-      <NavDropdown/>
+      <NavHeader isDropdownOpen={isDropdownOpen} handleDropdownToggle={handleDropdownToggle}/>
+      <NavDropdown isDropdownOpen={isDropdownOpen} handleDropdownToggle={handleDropdownToggle}/>
     </NavContainer>
   )
 }

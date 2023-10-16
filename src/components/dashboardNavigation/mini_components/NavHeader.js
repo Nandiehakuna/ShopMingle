@@ -9,10 +9,10 @@ const Nav = styled.nav`
 
 const Modal = styled.div``
 
-const NavHeader = () => {
+const NavHeader = ({isDropdownOpen,handleDropdownToggle}) => {
   return (
     <Nav>
-        <MenuIcon className='nav-toggle' style={{ fontSize: "3em",
+        <MenuIcon onClick={handleDropdownToggle}  className='nav-toggle' style={{ fontSize: "3em",
         position: "absolute",
         top: "0.35em",
         left: "0.4em",

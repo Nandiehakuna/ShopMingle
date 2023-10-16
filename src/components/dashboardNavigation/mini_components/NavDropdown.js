@@ -10,12 +10,13 @@ const Container = styled.div`
   bottom: 0;
   width: 50vw;
   background-color: var(--blue50);
+  display: ${(props) => props.display === true ? "block": "none"};
 `
 
-const NavDropdown = () => {
+const NavDropdown = ({isDropdownOpen,handleDropdownToggle}) => {
   return (
-    <Container>
-        <HighlightOffIcon style={{ position: "absolute",
+    <Container display={isDropdownOpen}>
+        <HighlightOffIcon onClick={handleDropdownToggle} style={{ position: "absolute",
         top: "0.5em",
         right: "1em",
         fontSize: "2.5em",
