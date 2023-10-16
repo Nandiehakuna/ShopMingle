@@ -9,6 +9,12 @@ const Container = styled.a`
   top: 1em;
   left: 5em;
 
+
+  @media (min-width: 45em) {
+    left: 1em;
+    z-index: 32;
+  }
+
 `
 const Text = styled.span`
   position: absolute;
