@@ -7,8 +7,6 @@ const Nav = styled.nav`
   position: absolute;
 `
 
-const Modal = styled.div``
-
 const NavHeader = ({isDropdownOpen,handleDropdownToggle}) => {
   return (
     <Nav>
@@ -19,7 +17,6 @@ const NavHeader = ({isDropdownOpen,handleDropdownToggle}) => {
         color : "var(--blue900)",
         cursor: "pointer"}}/>
         <NavLogo/>
-        <Modal/>
         
     </Nav>
   )
