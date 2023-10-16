@@ -1,8 +1,14 @@
 import React from 'react'
+import styled from 'styled-components'
+
+
+const Section = styled.section`
+  height: 1000px;
+`
 
 const DashBoardIndexPage = () => {
   return (
-    <div>DashBoardIndexPage</div>
+    <Section>DashBoardIndexPage</Section>
   )
 }
 

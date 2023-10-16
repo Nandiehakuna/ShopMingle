@@ -7,6 +7,8 @@ const Nav = styled.nav`
   position: absolute;
 `
 
+const Modal = styled.div``
+
 const NavHeader = () => {
   return (
     <Nav>
@@ -14,8 +16,11 @@ const NavHeader = () => {
         position: "absolute",
         top: "0.35em",
         left: "0.4em",
-        color : "var(--blue900)"}}/>
+        color : "var(--blue900)",
+        cursor: "pointer"}}/>
         <NavLogo/>
+        <Modal/>
+        
     </Nav>
   )
 }
