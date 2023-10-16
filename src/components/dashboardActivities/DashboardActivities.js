@@ -23,6 +23,10 @@ const Container = styled.div`
   color: var(--white-color);
   font-weight: bold;
   cursor: pointer;
+
+  @media (min-width: 45em) {
+    padding: 1em 0.1em ;
+  }
 `
 
 const Modal = styled.div`
@@ -47,9 +51,9 @@ const DashboardActivities = () => {
   return (
     <Section>
       <ActivityDrawer handleActivityToggle={handleActivityToggle} isActivityToggle={isActivityToggle} />
-      <Modal display={isActivityToggle}/>
+      <Modal onClick={handleActivityToggle} display={isActivityToggle}/>
       <Container onClick={handleActivityToggle}  isOpen={isActivityToggle}>
-        <KeyboardArrowLeftIcon style={{ fontSize: "2.3em",
+        <KeyboardArrowLeftIcon style={{ fontSize: "2.1em",
         cursor: "pointer"}}/>
       </Container>
     </Section>

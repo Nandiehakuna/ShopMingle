@@ -13,6 +13,14 @@ const Section = styled.section`
   background: var(--blue50);
   display: ${(props) => props.display === true ? "block":"none"};
   z-index: 41;
+
+  @media (min-width: 45em) {
+    width: 50vw;
+  }
+
+  @media (min-width: 55em) {
+    width: 30vw;
+  }
 `
 
 const ActivityDrawer = ({isActivityToggle,handleActivityToggle}) => {
