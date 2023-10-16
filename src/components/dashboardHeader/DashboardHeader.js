@@ -26,7 +26,7 @@ const Wrapper = styled.div`
   
 `
 
-const Exatra = styled.div`
+const Greeting = styled.div`
   position: absolute;
   top: 1.5em;
   font-weight: normal;
@@ -41,9 +41,9 @@ const DashboardHeader = () => {
   return (
     <Container>
       <Wrapper>
-        <Exatra>
+        <Greeting>
           Hello, Abuu Yasar
-        </Exatra>
+        </Greeting>
         <Avatar src={imgUrl}/>
       </Wrapper>
     </Container>
