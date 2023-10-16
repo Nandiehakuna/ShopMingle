@@ -4,6 +4,9 @@ import NavHeader from './mini_components/NavHeader'
 
 
 const NavContainer = styled.nav`
+  position: relative;
+  top: 0;
+  left: 0;
 
 `
 
