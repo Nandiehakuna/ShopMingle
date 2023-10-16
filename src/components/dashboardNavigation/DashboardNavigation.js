@@ -1,8 +1,17 @@
 import React from 'react'
+import styled from 'styled-components'
+import NavHeader from './mini_components/NavHeader'
+
+
+const NavContainer = styled.nav`
+`
 
 const DashboardNavigation = () => {
   return (
-    <div>DashboardNavigation</div>
+    <NavContainer>
+      <NavHeader/>
+      DashboardNavigation
+    </NavContainer>
   )
 }
 
