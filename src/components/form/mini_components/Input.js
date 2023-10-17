@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { styled } from 'styled-components'
 
 
@@ -31,20 +31,21 @@ const Label = styled.label`
 
 const Message = styled.div`
   position: absolute;
-  background-color: var(--success-bg-color);
+  background-color: var(--error-bg-color);
   width: max-content;
   padding: 0.2em 1em;
   border-radius: 0.5em;
-  color: var(--success-color);
+  color: var(--error-color);
   top: -0.5em;
-  display: none;
+  display: ${(props) => props.type === 'error'? 'block':'none'};
 `
 
 
-const Input = ({type,placeholder, value,onChange, required}) => {
+const Input = ({type,placeholder, value,onChange, required,message}) => {
+  
   return (
     <InnerWrapper>
-      <Message>invalid username or password</Message>
+      <Message type={message.type}>{message.msg}</Message>
       <Label></Label>
       <Inpt type={type} required={required} value={value} onChange={onChange} placeholder={placeholder}/>
     </InnerWrapper>
