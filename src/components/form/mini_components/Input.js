@@ -32,12 +32,15 @@ const Label = styled.label`
 const Message = styled.div`
   position: absolute;
   background-color: var(--error-bg-color);
-  width: max-content;
+  width: inherit;
+  text-align: center;
   padding: 0.2em 1em;
   border-radius: 0.5em;
   color: var(--error-color);
   top: -0.5em;
-  display: ${(props) => props.type === 'error'? 'block':'none'};
+  right: 0;
+  left: 0;
+  display: ${(props) => props.display === true? 'block':'none'};
 `
 
 
@@ -45,7 +48,7 @@ const Input = ({type,placeholder, value,onChange, required,message}) => {
   
   return (
     <InnerWrapper>
-      <Message type={message.type}>{message.msg}</Message>
+      <Message display={message.show} type={message.type}>{message.msg}</Message>
       <Label></Label>
       <Inpt type={type} required={required} value={value} onChange={onChange} placeholder={placeholder}/>
     </InnerWrapper>

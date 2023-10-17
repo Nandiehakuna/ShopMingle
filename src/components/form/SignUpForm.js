@@ -24,6 +24,15 @@ const Container = styled.div`
   margin-top: ${(props) => props.mrg === "top" && "2em"} ;
 `
 
+const MessageContainer = styled.div`
+     display: flex;
+     text-align: center;
+     display: block;
+     margin-top: 1em;
+     display: none;
+     padding: 0.8em 1em;
+`
+
 const SignUpForm = () => {
   const [username, setUsername] = useState('')
   const [email, setEmail] = useState('')
@@ -32,7 +41,8 @@ const SignUpForm = () => {
   const [message, setMessage] = useState({
     type: '',
     msg: '',
-    to: ''
+    to: '',
+    show: false
   });
 
 
@@ -43,9 +53,9 @@ const SignUpForm = () => {
       setMessage({
         type: 'error',
         msg: 'Password length must be at least 8 character long',
-        to: 'password'
+        to: 'password',
+        show:true
       })
-      console.log("m : ",message);
       return;
     }
   }
@@ -60,26 +70,39 @@ const SignUpForm = () => {
 
   const handlePasswordOnChange = (e) =>{
     setPassword(e.target.value)
+    setMessage({
+      type: '',
+      msg: '',
+      to: '',
+      show: false
+    })
   } 
 
   const handleConfirmPasswordOnChange = (e) =>{
     setConfirmPassword(e.target.value)
+    
+    setMessage({
+      type: '',
+      msg: '',
+      to: '',
+      show: false
+    })
   }
-
 
   return (
     <Main>
         <Form onSubmit={signup}>
+          <MessageContainer></MessageContainer>
             <Wrapper>
-                <Input type="text"  message={message.to === 'username' && message} value={username} onChange={handleUsernameOnChange} required={true} placeholder="Enter username"/>
-                <Input type="email" message={message.to === 'email' && message} value={email} onChange={handleEmailOnChange} required={true} placeholder="Enter email address"/>
-                <Input type="password" message={message.to === 'password' && message} value={password} onChange={handlePasswordOnChange} required={true} placeholder="Enter password"/>
-                <Input type="password" message={message.to === 'password' && message} value={confirmPassword} onChange={handleConfirmPasswordOnChange} required={true} placeholder="Confirm password"/>
-                <Button size="large">Sign Up</Button>
-                <Container mrg="top">
-                    Already have account ? 
-                    <Link to="/login" style={{ textDecoration: "none", marginLeft: "0.8em"}}>Sign In</Link>
-                </Container>
+              <Input type="text"  message={message.to === 'username' && message} value={username} onChange={handleUsernameOnChange} required={true} placeholder="Enter username"/>
+              <Input type="email" message={message.to === 'email' && message} value={email} onChange={handleEmailOnChange} required={true} placeholder="Enter email address"/>
+              <Input type="password" message={message.to === 'password' && message} value={password} onChange={handlePasswordOnChange} required={true} placeholder="Enter password"/>
+              <Input type="password" message={message.to === 'password' && message} value={confirmPassword} onChange={handleConfirmPasswordOnChange} required={true} placeholder="Confirm password"/>
+              <Button size="large">Sign Up</Button>
+              <Container mrg="top">
+                Already have account ? 
+                <Link to="/login" style={{ textDecoration: "none", marginLeft: "0.8em"}}>Sign In</Link>
+              </Container>
             </Wrapper>
         </Form>
     </Main>
