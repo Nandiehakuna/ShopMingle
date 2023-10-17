@@ -68,6 +68,17 @@ const SignUpForm = () => {
       })
       return;
     }
+
+    var regexPattern =/^[a-z](?:[a-z]+\d*|\d{2,})$/i;
+    if(!regexPattern.test(username)){
+      setMessage({
+        type: 'error',
+        msg: 'Invalid username',
+        to: 'username',
+        show:true
+      })
+      return;
+    }
   }
 
   const handleUsernameOnChange = (e) =>{
