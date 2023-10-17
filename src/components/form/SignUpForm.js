@@ -58,6 +58,16 @@ const SignUpForm = () => {
       })
       return;
     }
+
+    if (password !== confirmPassword){
+      setMessage({
+        type: 'error',
+        msg: 'Passwords do not match ',
+        to: 'password',
+        show:true
+      })
+      return;
+    }
   }
 
   const handleUsernameOnChange = (e) =>{
