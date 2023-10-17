@@ -62,31 +62,55 @@ const SignUpForm = () => {
 
   const handleUsernameOnChange = (e) =>{
     setUsername(e.target.value)
+
+    if(message.to === 'username'){
+      setMessage({
+        type: '',
+        msg: '',
+        to: '',
+        show: false
+      })
+    }
+    
   }
 
   const handleEmailOnChange = (e) => {
     setEmail(e.target.value)
+
+    if(message.to === 'email'){
+      setMessage({
+        type: '',
+        msg: '',
+        to: '',
+        show: false
+      })
+    }
   }
 
   const handlePasswordOnChange = (e) =>{
     setPassword(e.target.value)
-    setMessage({
-      type: '',
-      msg: '',
-      to: '',
-      show: false
-    })
+    
+    if(message.to === 'password'){
+      setMessage({
+        type: '',
+        msg: '',
+        to: '',
+        show: false
+      })
+    }
   } 
 
   const handleConfirmPasswordOnChange = (e) =>{
     setConfirmPassword(e.target.value)
-    
-    setMessage({
-      type: '',
-      msg: '',
-      to: '',
-      show: false
-    })
+
+    if(message.to === 'password'){
+      setMessage({
+        type: '',
+        msg: '',
+        to: '',
+        show: false
+      })
+    }
   }
 
   return (
